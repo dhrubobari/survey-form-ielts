@@ -2,169 +2,393 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 :root {
-    --text-color: rgb(27, 27, 27);
-    --field-color: rgb(255, 255, 255);
-    --primary-color: rgb(252, 95, 73);
-    --secondary-color: rgb(255, 235, 232);
+  --text-color: rgb(27, 27, 27);
+  --field-color: rgb(255, 255, 255);
+  --primary-color: rgb(252, 95, 73);
+  --secondary-color: rgb(255, 235, 232);
 }
 
 body {
-    font-family: 'Jost', sans-serif;
-    width: 100%;
-    position: relative;
-    height: auto;
-    background-color: rgb(255, 255, 255);
+  font-family: 'Jost', sans-serif;
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: rgb(255, 255, 255);
 }
 
 .start-wrapper {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 70px 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
 }
 
 .start {
-    text-align: center;
-    flex: 1;
-    display: grid;
-    align-content: center;
-    height: 100%;
+  text-align: center;
+  flex: 1;
+  display: grid;
+  align-content: center;
+  height: 100%;
 }
 
 .start .start-img {
-    width: auto;
+  width: auto;
 }
 
 .start-img img {
-    width: auto;
+  width: auto;
 }
 
 .start-text {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 40px;
-    position: relative;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
 }
 
 .start-text::before {
-    content: "";
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .start-text h2 {
-    font-size: 40px;
-    color: var(--text-color);
-    font-weight: bold;
+  font-size: 40px;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 .start-text p {
-    font-size: 30px;
-    color: var(--text-color);
-    margin-top: 20px;
+  font-size: 30px;
+  color: var(--text-color);
+  margin-top: 20px;
 }
 
 .start-btn {
-    border-radius: 6px;
-    background-color: var(--primary-color);
-    padding: 0 50px;
-    height: 86px;
-    border: solid 2px transparent;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: max-content;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  padding: 0 50px;
+  height: 86px;
+  border: solid 2px transparent;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: max-content;
+}
+
+#spinner {
+  display: none;
 }
 
 .register-photo {
-    background: #f1f7fc;
-    padding: 80px 0;
-  }
-  
-  .register-photo .image-holder {
-    display: table-cell;
-    width: auto;
-    background: url(https://onekeyvisa.us/wp-content/uploads/2021/01/Telecommuting-pana-1025x500.png);
-    background-size: cover;
-  }
-  
-  .register-photo .form-container {
-    display: table;
-    max-width: 900px;
-    width: 90%;
-    margin: 0 auto;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-  }
-  
+  background: #f1f7fc;
+  height: 100vh;
+  padding: 200px 0;
+}
+
+.register-photo .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(https://onekeyvisa.us/wp-content/uploads/2021/01/Telecommuting-pana-1025x500.png);
+  background-size: cover;
+}
+
+.register-photo .form-container {
+  display: table;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.register-photo form {
+  display: table-cell;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  color: #505e6c;
+}
+
+@media (max-width:991px) {
   .register-photo form {
-    display: table-cell;
-    width: 400px;
-    background-color: #ffffff;
-    padding: 40px 60px;
-    color: #505e6c;
+    padding: 40px;
   }
-  
-  @media (max-width:991px) {
-    .register-photo form {
-      padding: 40px;
-    }
-  }
-  
-  .register-photo form h2 {
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  
-  .register-photo form .form-control {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #dfe7f1;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
-    color: inherit;
-    text-indent: 0px;
-    height: 40px;
-  }
-  
-  .register-photo form .form-check {
-    font-size: 13px;
-    line-height: 20px;
-  }
-  
-  .register-photo form .btn-primary {
-    background: green;
-    border: none;
-    border-radius: 4px;
-    padding: 11px;
-    box-shadow: none;
-    margin-top: 35px;
-    text-shadow: none;
-    outline: none !important;
-  }
-  
-  .register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
-    background: green;
-  }
-  
-  .register-photo form .btn-primary:active {
-    transform: translateY(1px);
-  }
-  
-  .register-photo form .already {
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    color: #6f7a85;
-    opacity: 0.9;
-    text-decoration: none;
-  }
-  
+}
+
+.register-photo form h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.register-photo form .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 0px;
+  height: 40px;
+}
+
+.register-photo form .form-check {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.register-photo form .btn-primary {
+  background: green;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 35px;
+  text-shadow: none;
+  outline: none !important;
+}
+
+.register-photo form .btn-primary:hover,
+.register-photo form .btn-primary:active {
+  background: green;
+}
+
+.register-photo form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.register-photo form .already {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+#steps {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--secondary-color);
+  height: 107px;
+  width: 100%;
+  display: grid;
+  padding: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 35px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.form-inner {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding: 100px;
+}
+
+.form-wrapper {
+  width: 68%;
+  margin: 0 auto;
+}
+
+.steps .label-head {
+  font-size: 35px;
+  color: var(--text-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.steps .label-head::before {
+  content: "C";
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgb(234, 234, 234);
+  min-width: 43px;
+  height: 43px;
+  font-size: 20px;
+  color: rgb(193, 193, 193);
+  text-transform: uppercase;
+  line-height: 43px;
+  text-align: center;
+  margin-right: 17px;
+}
+
+#step1 .label-head::before {
+  content: "a";
+}
+
+#step2 .label-head::before {
+  content: "b";
+}
+
+#step3 .label-head::before {
+  content: "c";
+}
+
+#step4 .label-head::before {
+  content: "d";
+}
+
+#step5 .label-head::before {
+  content: "e";
+}
+
+.select-field {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.select-field select {
+  appearance: none;
+  border: 0;
+  border-bottom: solid 3px var(--primary-color);
+  width: 100%;
+  height: 60px;
+  font-size: 29px;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.select-field select+span::before {
+  content: "\f107";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--primary-color);
+  position: absolute;
+  right: 7px;
+  top: 20px;
+  pointer-events: none;
+}
+
+.select-field select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.select-field select:focus~span::before {
+  color: var(--secondary-color);
+}
+
+.confirm {
+  border-radius: 6px;
+  border: solid 2px transparent;
+  background-color: rgb(252, 95, 73);
+  width: 110px;
+  margin-top: 10px;
+  height: 65px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm::after {
+  content: "?";
+  display: inline-block;
+  margin-left: 7px;
+  width: 17px;
+}
+
+.confirm.active::after {
+  content: "";
+  border-left: solid 3px var(--secondary-color);
+  border-bottom: solid 3px var(--secondary-color);
+  width: 17px;
+  height: 10px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  position: relative;
+  top: 3px;
+}
+
+.next-prev {
+  display: flex;
+  width: auto;
+  height: 68px;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  flex-wrap: wrap;
+  bottom: 0;
+}
+
+.next-prev button {
+  background-color: var(--primary-color);
+  padding: 0 80px;
+  height: 100%;
+  width: max-content;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 0;
+  margin-right: 1px;
+}
+
+.next-prev button i {
+  position: relative;
+  top: 2px;
+  margin: 0 10px;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  height: 68px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.step-bar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: end;
+  margin-right: 180px;
+}
+
+.bar-inner {
+  background-color: rgb(255, 205, 197);
+  width: 50%;
+  height: 16px;
+  border-radius: 50px;
+}
+
+.bar-inner .fill {
+  border-radius: inherit;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.complete-rate {
+  font-size: 19px;
+  color: rgb(36, 36, 36);
+  font-weight: bold;
+  margin-left: 50px;
+}

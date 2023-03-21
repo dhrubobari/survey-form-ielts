@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <form id="steps">
+
+        <!-- header -->
+        <header>
+            <h1>Choose the correct sentence</h1>
+        </header>
+    
+        <div class="form-inner">
+            <div class="container">
+        <!-- step 1  -->
+        <section class="steps form-wrapper">
+    
+            <!-- step1 form  -->
+            <fieldset id="step1">
+                <label class="label-head">Which sentence uses the correct preposition?</label>
+                <div class="revealfield select-field">
+                    <select name="sentence">
+                        <option value="">select the correct sentence</option>
+                        <option value="">I'm interested in learning Spanish.</option>
+                        <option value="">I'm interested on learning Spanish.</option>
+                        <option value="">I'm interested for learning Spanish.</option>
+                    </select>
+                    <span></span>
+                </div>
+                <button type="button" class="confirm">
+                    Ok
+                </button>
+            </fieldset>
+    
+            <!-- next prev button -->
+            <div class="next-prev">
+                <button class="prev" type="button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </button>
+                <button class="next" type="button" id="step1btn">
+                    Next
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        </div>
+        </div>
+    
+        <!-- footer -->
+        <footer>
+            <div class="step-bar">
+                <div class="bar-inner">
+                    <div class="fill"></div>
+                </div>
+                <div class="complete-rate">
+                    <span>30</span>% Completed
+                </div>
+            </div>
+        </footer>
+      </form>
+    
+       <!-- bootstrap 5 -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    
+      <!-- My JS -->
+      <script src="assets/js/index.js"></script>
+</body>
+</html>
