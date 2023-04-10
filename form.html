@@ -36,17 +36,23 @@
         <!-- step1 form  -->
         <fieldset id="step1">
             <label class="label-head">She _____ the piano for five years.</label>
-            <div class="revealfield select-field">
-                <select name="word">
-                    <option value="">select the correct word</option>
-                    <option value="">plays</option>
-                    <option value="">played</option>
-                    <option value="">has played</option>
-                </select>
-                <span></span>
+            <div class="list-options">
+                <div class="option" id="option-a">
+                    <div class="option-letter">a</div>
+                    <div class="option-answer" onclick="changeColor(this)">plays</div>
+                </div>
+                <div class="option" id="option-b">
+                    <div class="option-letter">b</div>
+                    <div class="option-answer" onclick="changeColor(this)">played</div>
+                </div>
+                <div class="option" id="option-c">
+                    <div class="option-letter">c</div>
+                    <div class="option-answer" onclick="changeColor(this)">has played</div>
+                </div>
             </div>
-            <button type="button" class="confirm">
-                Ok
+            
+            <button type="button" id="okButton" class="confirm" disabled>
+                Ok 
             </button>
         </fieldset>
 

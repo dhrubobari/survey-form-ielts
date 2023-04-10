@@ -15,6 +15,31 @@ redirectBtn.addEventListener('click', () => {
     }, 1000);
   });
 
+  function changeColor(div) {
+    const options = document.querySelectorAll('.option-answer');
+    const confirmBtn = document.querySelector('.confirm');
+  
+    options.forEach(option => {
+      if (option !== div) {
+        option.classList.remove('clicked');
+      }  
+    });
+    div.classList.toggle('clicked');
+  
+    // Check if any option is currently selected
+    const selectedOption = document.querySelector('.option-answer.clicked');
+    if (selectedOption) {
+      // Enable the "Ok" button
+      confirmBtn.disabled = false;
+      confirmBtn.style.backgroundColor = 'rgb(252, 95, 73)';
+      confirmBtn.style.transition = 'background-color 0.2s ease-in-out';
+    } else {
+      // Disable the "Ok" button
+      confirmBtn.disabled = true;
+      confirmBtn.style.backgroundColor = 'silver';
+    }
+  }
+  
 //show active step
 function showActiveStep() {
     if ($('#step1').is(':visible')) {
@@ -80,3 +105,5 @@ $('.table-single').on('click', function() {
     $('.table-single').removeClass('active');
     $(this).addClass('active');
 })
+
+ // EmailJs Setup

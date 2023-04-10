@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animation.css">
+    
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Jquery -->
@@ -36,15 +35,21 @@
             <!-- step1 form  -->
             <fieldset id="step1">
                 <label class="label-head">Choose the sentence that uses the correct article:</label>
-                <div class="revealfield select-field">
-                    <select name="sentence">
-                        <option value="">select the correct sentence</option>
-                        <option value="">I'm going to buy the shoes.</option>
-                        <option value="">I'm going to buy a shoes.</option>
-                        <option value="">I'm going to buy shoes.</option>
-                    </select>
-                    <span></span>
+                <div class="list-options">
+                    <div class="option">
+                        <div class="option-letter">a</div>
+                        <div class="option-answer">I'm going to buy the shoes.</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-letter">b</div>
+                        <div class="option-answer">I'm going to buy a shoes.</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-letter">c</div>
+                        <div class="option-answer">I'm going to buy shoes.</div>
+                    </div>
                 </div>
+                <!-- onclick class with option-answer div background color will change -->
                 <button type="button" class="confirm">
                     Ok
                 </button>

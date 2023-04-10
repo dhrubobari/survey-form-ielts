@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+   
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
@@ -35,15 +35,21 @@
             <!-- step1 form  -->
             <fieldset id="step1">
                 <label class="label-head">I _____ my best in the exam.</label>
-                <div class="revealfield select-field">
-                    <select name="word">
-                        <option value="">select the correct word</option>
-                        <option value="">try</option>
-                        <option value="">tries</option>
-                        <option value="">tried</option>
-                    </select>
-                    <span></span>
+                <div class="list-options">
+                    <div class="option">
+                        <div class="option-letter">a</div>
+                        <div class="option-answer">try</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-letter">b</div>
+                        <div class="option-answer">tries</div>
+                    </div>
+                    <div class="option">
+                        <div class="option-letter">c</div>
+                        <div class="option-answer">tried</div>
+                    </div>
                 </div>
+                <!-- onclick class with option-answer div background color will change -->
                 <button type="button" class="confirm">
                     Ok
                 </button>

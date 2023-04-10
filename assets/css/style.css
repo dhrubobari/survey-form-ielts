@@ -183,7 +183,7 @@ body {
 
 header {
   background-color: var(--secondary-color);
-  height: 107px;
+  height: 84px;
   width: 100%;
   display: grid;
   padding: 20px;
@@ -192,7 +192,7 @@ header {
 }
 
 header h1 {
-  font-size: 35px;
+  font-size: 32px;
   color: var(--text-color);
   font-weight: bold;
 }
@@ -212,30 +212,67 @@ header h1 {
 
 .steps .label-head {
   font-size: 35px;
-  color: var(--text-color);
-  font-weight: bold;
-  display: flex;
-  align-items: center;
   margin-bottom: 30px;
 }
 
-.steps .label-head::before {
-  content: "C";
-  display: inline-block;
-  border-radius: 50%;
-  background-color: rgb(234, 234, 234);
-  min-width: 43px;
-  height: 43px;
-  font-size: 20px;
-  color: rgb(193, 193, 193);
-  text-transform: uppercase;
-  line-height: 43px;
-  text-align: center;
-  margin-right: 17px;
+.list-options {
+  display: flex;
+  flex-direction: column;
 }
 
-#step1 .label-head::before {
-  content: "a";
+.option {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.option-letter {
+  border: 1px solid silver;
+  background: silver;
+  border-radius: 6px;
+  padding-right: 14px;
+  padding-left: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 18.5px;
+  color: #f1f7fc;
+  margin: 5px;
+  margin-right: 8px;
+}
+
+.option-answer {
+  display: inline-block;
+  border: 1px solid gray;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.option-answer:hover {
+  background-color: #f0f0f0;
+}
+
+.option-answer.clicked {
+  background-color: rgb(252, 95, 73);
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+button.confirm:disabled {
+  background-color: silver;
+}
+
+@media only screen and (min-width: 600px) {
+  .option-answer {
+      width: 50%;
+  }
+}
+
+.option input[type="radio"] {
+  margin-left: 10px;
 }
 
 #step2 .label-head::before {
@@ -252,46 +289,6 @@ header h1 {
 
 #step5 .label-head::before {
   content: "e";
-}
-
-.select-field {
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.select-field select {
-  appearance: none;
-  border: 0;
-  border-bottom: solid 3px var(--primary-color);
-  width: 100%;
-  height: 60px;
-  font-size: 29px;
-  color: #aaaaaa;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.select-field select+span::before {
-  content: "\f107";
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  font-size: 18px;
-  color: var(--primary-color);
-  position: absolute;
-  right: 7px;
-  top: 20px;
-  pointer-events: none;
-}
-
-.select-field select:focus {
-  outline: none;
-  border-color: var(--secondary-color);
-}
-
-.select-field select:focus~span::before {
-  color: var(--secondary-color);
 }
 
 .confirm {
